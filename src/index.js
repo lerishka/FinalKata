@@ -214,3 +214,50 @@ window.addEventListener ('resize', function(){
     }
   }
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const buttonBurger = document.querySelector('.header__button--burger');
+const buttonClose = document.querySelector('.menu__header-button--close');
+const menu = document.querySelector ('.menu');
+
+buttonBurger.addEventListener ('click', function() {
+  menu.classList.add ('menu--opened');
+});
+
+buttonClose.addEventListener ('click', function() {
+  menu.classList.remove ('menu--opened');
+});
+
+
+
