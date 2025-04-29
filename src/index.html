@@ -68,6 +68,19 @@
         </footer>
     </div>
 
+
+
+
+
+
+    <div class="overlay"></div>
+
+
+
+
+
+
+
     <main class="main">
 
     <header class="header">
@@ -540,7 +553,7 @@
 
 
 
-    <!-- <div class="modal-feedback">
+    <div class="modal-feedback">
 
         <div class="modal-feedback__wrapper">
 
@@ -552,22 +565,26 @@
 
         <form class="modal-feedback__form">
 
-            <input type="text" id="name" name="name" required placeholder="Имя">
+            <input class="modal-feedback__form-info" type="text" id="name" name="name" required placeholder="Имя">
 
-            <input type="phone" id="phone" name="phone" required placeholder="Телефон">
+            <input class="modal-feedback__form-info" type="phone" id="phone" name="phone" required placeholder="Телефон">
           
-            <input type="email" id="email" name="email" required placeholder="Электронная почта">
+            <input class="modal-feedback__form-info" type="email" id="email" name="email" required placeholder="Электронная почта">
     
-            <textarea id="message" name="message" required placeholder="Сообщение"></textarea>
+            <textarea class="modal-feedback__form-info" id="message" name="message" required placeholder="Сообщение"></textarea>
 
-            <p class="">Нажимая “отправить”, вы даете согласие на обработку персональных данных и соглашаетесь с нашей политикой конфиденциальности</p>
+            <p class="modal-feedback__form-text">Нажимая “отправить”, вы даете согласие на <a href="/" class='modal-feedback__form-text--link'>обработку персональных данных</a> и соглашаетесь с нашей <a href="/" class='modal-feedback__form-text--link'>политикой конфиденциальности</a></p>
           
-            <button class="modal-feedback__button modal-feedback__submit" type="submit">Отправить</button>
+            <button type="submit" class="modal-feedback__submit">
+                <p class="modal-feedback__button-text">Отправить</p>
+                <img src="./styles/icons/goside.svg" alt="" aria-hidden="true">
+            </button>
+            
           </form>
 
         </div>
 
-    </div> -->
+    </div>
        
   
 </body>

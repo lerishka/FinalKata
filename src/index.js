@@ -246,18 +246,26 @@ window.addEventListener ('resize', function(){
 
 
 
-
+const main = document.querySelector ('.main');
 const buttonBurger = document.querySelector('.header__button--burger');
 const buttonClose = document.querySelector('.menu__header-button--close');
 const menu = document.querySelector ('.menu');
+const overlay = document.querySelector('.overlay');
+
 
 buttonBurger.addEventListener ('click', function() {
   menu.classList.add ('menu--opened');
+  main.classList.add ('main--menu-open');
+  overlay.classList.add ('overlay--active');
 });
 
-buttonClose.addEventListener ('click', function() {
+function closeMenu () {
   menu.classList.remove ('menu--opened');
-});
+  main.classList.remove ('main--menu-open');
+  overlay.classList.remove ('overlay--active');
+}
 
+buttonClose.addEventListener ('click', closeMenu);
+overlay.addEventListener ('click', closeMenu);
 
 
