@@ -269,3 +269,56 @@ buttonClose.addEventListener ('click', closeMenu);
 overlay.addEventListener ('click', closeMenu);
 
 
+
+const buttonChat = document.querySelector('.menu__footer-button--chat');
+const modalFeedback = document.querySelector ('.modal-feedback');
+const buttonCloseModal = document.querySelector('.modal-feedback__button');
+const buttonChatHead = document.querySelector('.header__button--chat');
+
+function openFeedback (){
+  modalFeedback.classList.add ('modal-feedback--opened');
+  main.classList.add ('main--menu-open');
+  overlay.classList.add ('overlay--active');
+};
+
+function closeFeedback () {
+  modalFeedback.classList.remove ('modal-feedback--opened');
+  main.classList.remove ('main--menu-open');
+  overlay.classList.remove ('overlay--active');
+}
+
+buttonChat.addEventListener ('click', openFeedback);
+buttonChatHead.addEventListener ('click', openFeedback);
+
+buttonCloseModal.addEventListener ('click', closeFeedback)
+overlay.addEventListener ('click', closeFeedback)
+
+
+
+
+
+
+
+
+const buttonCall = document.querySelector('.menu__footer-button--call');
+const modalCall = document.querySelector ('.modal-call');
+const buttonCloseModalCall = document.querySelector('.modal-call__button');
+const buttonCallHead = document.querySelector('.header__button--call');
+
+function openCall (){
+  modalCall.classList.add ('modal-call--opened');
+  main.classList.add ('main--menu-open');
+  overlay.classList.add ('overlay--active');
+};
+
+function closeCall () {
+  modalCall.classList.remove ('modal-call--opened');
+  main.classList.remove ('main--menu-open');
+  overlay.classList.remove ('overlay--active');
+}
+
+buttonCall.addEventListener ('click', openCall);
+buttonCallHead.addEventListener ('click', openCall);
+
+buttonCloseModalCall.addEventListener ('click', closeCall)
+overlay.addEventListener ('click', closeCall)
