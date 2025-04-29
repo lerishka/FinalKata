@@ -2,7 +2,7 @@ const path = require('path'); // Импортируем модуль "path" дл
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  entry: './src/index.js', // Точка входа для сборки проекта
+  entry: './docs/index.js', // Точка входа для сборки проекта
 
   output: {
     filename: 'bundle.js', // Имя выходного файла сборки
@@ -54,7 +54,7 @@ module.exports = {
   
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/index.html',
+      template: './docs/index.html',
     }),
   ],
 
