@@ -251,18 +251,21 @@ const buttonBurger = document.querySelector('.header__button--burger');
 const buttonClose = document.querySelector('.menu__header-button--close');
 const menu = document.querySelector ('.menu');
 const overlay = document.querySelector('.overlay');
+const body = document.querySelector('body');
 
 
 buttonBurger.addEventListener ('click', function() {
   menu.classList.add ('menu--opened');
   main.classList.add ('main--menu-open');
   overlay.classList.add ('overlay--active');
+  body.classList.add ('opened-menu');
 });
 
 function closeMenu () {
   menu.classList.remove ('menu--opened');
   main.classList.remove ('main--menu-open');
   overlay.classList.remove ('overlay--active');
+  body.classList.remove ('opened-menu');
 }
 
 buttonClose.addEventListener ('click', closeMenu);
@@ -279,12 +282,14 @@ function openFeedback (){
   modalFeedback.classList.add ('modal-feedback--opened');
   main.classList.add ('main--menu-open');
   overlay.classList.add ('overlay--active');
+  body.classList.add ('opened-menu');
 };
 
 function closeFeedback () {
   modalFeedback.classList.remove ('modal-feedback--opened');
   main.classList.remove ('main--menu-open');
   overlay.classList.remove ('overlay--active');
+  body.classList.remove ('opened-menu');
 }
 
 buttonChat.addEventListener ('click', openFeedback);
@@ -309,12 +314,14 @@ function openCall (){
   modalCall.classList.add ('modal-call--opened');
   main.classList.add ('main--menu-open');
   overlay.classList.add ('overlay--active');
+  body.classList.add ('opened-menu');
 };
 
 function closeCall () {
   modalCall.classList.remove ('modal-call--opened');
   main.classList.remove ('main--menu-open');
   overlay.classList.remove ('overlay--active');
+  body.classList.remove ('opened-menu');
 }
 
 buttonCall.addEventListener ('click', openCall);

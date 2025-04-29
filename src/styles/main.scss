@@ -29,6 +29,10 @@ body {
     font-family: 'TT Lakes';
 }
 
+.opened-menu {
+    overflow: hidden;
+}
+
 
 .wrapper {
     display: flex;
@@ -1176,7 +1180,7 @@ a {
     flex-direction: column;
     justify-content: flex-start;
     min-width: 320px;
-    height: auto;
+    height: 100vh;
     background-color: #ffffff;
     top: 0;
     left:-420px;
@@ -1196,6 +1200,7 @@ a {
         left: 0;
         position: static;
         transition: none;
+        height: auto;
     }
 
     &--opened {
@@ -1269,6 +1274,7 @@ a {
 
         &:hover {
             cursor: pointer
+            color: #7E7E82;
         }
 
         &--active {
@@ -1366,8 +1372,7 @@ a {
 
 .modal-feedback {
     position: absolute;
-    min-width: 320px;
-    max-width: 440px;
+    width: 320px;
     height: 100vh;
     background-color: #ffffff;
     top: 0;
@@ -1488,8 +1493,7 @@ a {
 
 .modal-call {
     position: absolute;
-    min-width: 320px;
-    max-width: 440px;
+    width: 320px;
     height: 100vh;
     background-color: #ffffff;
     top: 0;
