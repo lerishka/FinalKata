@@ -3,7 +3,7 @@ import 'swiper/css';
 import { Pagination } from 'swiper/modules';
 import 'swiper/css/pagination';
 import 'normalize.css';
-import '../src/styles/main.scss'
+import './styles/main.scss'
 
 let swiperBrands;
 
