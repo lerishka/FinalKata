@@ -252,6 +252,7 @@ const buttonClose = document.querySelector('.menu__header-button--close');
 const menu = document.querySelector ('.menu');
 const overlay = document.querySelector('.overlay');
 const body = document.querySelector('body');
+const wrapper = document.querySelector ('.wrapper')
 
 
 buttonBurger.addEventListener ('click', function() {
@@ -273,6 +274,11 @@ overlay.addEventListener ('click', closeMenu);
 
 
 
+
+
+
+
+
 const buttonChat = document.querySelector('.menu__footer-button--chat');
 const modalFeedback = document.querySelector ('.modal-feedback');
 const buttonCloseModal = document.querySelector('.modal-feedback__button');
@@ -280,16 +286,22 @@ const buttonChatHead = document.querySelector('.header__button--chat');
 
 function openFeedback (){
   modalFeedback.classList.add ('modal-feedback--opened');
-  main.classList.add ('main--menu-open');
   overlay.classList.add ('overlay--active');
-  body.classList.add ('opened-menu');
+  wrapper.classList.add ('opened-modal');
+
+  if (modalCall.classList.contains('modal-call--opened')) {
+    modalCall.classList.remove ('modal-call--opened');
+  }
 };
 
 function closeFeedback () {
   modalFeedback.classList.remove ('modal-feedback--opened');
-  main.classList.remove ('main--menu-open');
   overlay.classList.remove ('overlay--active');
-  body.classList.remove ('opened-menu');
+  wrapper.classList.remove ('opened-modal');
+
+  if (menu.classList.contains('menu--opened')) {
+    overlay.classList.add ('overlay--active');
+  }
 }
 
 buttonChat.addEventListener ('click', openFeedback);
@@ -312,16 +324,22 @@ const buttonCallHead = document.querySelector('.header__button--call');
 
 function openCall (){
   modalCall.classList.add ('modal-call--opened');
-  main.classList.add ('main--menu-open');
   overlay.classList.add ('overlay--active');
-  body.classList.add ('opened-menu');
+  wrapper.classList.add ('opened-modal');
+
+  if (modalFeedback.classList.contains('modal-feedback--opened')) {
+    modalFeedback.classList.remove ('modal-feedback--opened');
+  }
 };
 
 function closeCall () {
   modalCall.classList.remove ('modal-call--opened');
-  main.classList.remove ('main--menu-open');
   overlay.classList.remove ('overlay--active');
-  body.classList.remove ('opened-menu');
+  wrapper.classList.remove ('opened-modal');
+
+  if (menu.classList.contains('menu--opened')) {
+    overlay.classList.add ('overlay--active');
+  }
 }
 
 buttonCall.addEventListener ('click', openCall);
